@@ -1,6 +1,7 @@
+import { ImageCardProps } from "./ImageCard.types";
 import css from "./ImageCard.module.css";
 
-const ImageCard = ({ imgUrl, imgDescr, onClick }) => {
+const ImageCard: React.FC<ImageCardProps> = ({ imgUrl, imgDescr, onClick }) => {
   const handleClick = () => {
     onClick(imgUrl);
   };

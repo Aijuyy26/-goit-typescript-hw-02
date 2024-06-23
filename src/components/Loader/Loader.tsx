@@ -1,8 +1,9 @@
 import { Audio } from "react-loader-spinner";
+import React from "react";
 
-const Loader = () => (
+const Loader: React.FC = () => (
   <div className="loader-container">
-    <Audio type="TailSpin" color="#00BFFF" height={100} width={100} />
+    <Audio color="#00BFFF" height={100} width={100} />
     <p>Loading data, please wait...</p>
   </div>
 );

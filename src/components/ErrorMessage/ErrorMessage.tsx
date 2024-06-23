@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import toast from "react-hot-toast";
 
-const Error = () => {
+const Error: React.FC = () => {
   useEffect(() => {
     toast.error("This didn't work.");
   }, []);

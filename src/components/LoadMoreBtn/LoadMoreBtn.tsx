@@ -1,6 +1,8 @@
+import { LoadMoreBtnProps } from "./LoadMoreBtn.types";
+
 import css from "./LoadMoreBtn.module.css";
 
-const LoadMoreBtn = ({ onClick, loading }) => {
+const LoadMoreBtn: React.FC<LoadMoreBtnProps> = ({ onClick, loading }) => {
   return (
     <div className={css.center}>
       <button
