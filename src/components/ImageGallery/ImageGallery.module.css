@@ -1,24 +1,25 @@
 /* ImageGallery.module.css */
 
-.image-gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  
-  .image-gallery li .image-card {
-    width: 200px; /* Встановіть ширину відповідно до вашого дизайну */
-  }
-  
-  .image-gallery li .image-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  .image-gallery li .image-card p {
-    margin-top: 5px;
-    font-size: 14px;
-    text-align: center;
-  }
+.imageGallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imageGallery li {
+  margin: 10px;
+}
+
+.imageGallery li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.imageGallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

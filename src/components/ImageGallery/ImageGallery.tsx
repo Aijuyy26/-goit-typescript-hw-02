@@ -1,24 +1,32 @@
 import React from "react";
 import ImageCard from "../ImageCard/ImageCard";
-import css from "./ImageGallery.module.css";
-import { ImageGalleryProps } from "./ImageGallery.types";
+import styles from "./ImageGallery.module.css";
 
-const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => (
-  <ul className={css["image-gallery"]}>
-    {items.map(
-      (
-        { id, urls, slug } // Ось тут використовується slug
-      ) => (
-        <li key={id}>
+interface ImageGalleryItem {
+  id: string;
+  urls: { small: string };
+  slug: string;
+}
+
+interface ImageGalleryProps {
+  items: ImageGalleryItem[];
+  onImageClick: (imgUrl: string) => void;
+}
+
+const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
+  return (
+    <ul className={styles.imageGallery}>
+      {items.map((item) => (
+        <li key={item.id}>
           <ImageCard
-            imgUrl={urls.small}
-            imgDescr={slug}
+            imgUrl={item.urls.small}
+            imgDescr={item.slug}
             onClick={onImageClick}
           />
         </li>
-      )
-    )}
-  </ul>
-);
+      ))}
+    </ul>
+  );
+};
 
 export default ImageGallery;

@@ -1,20 +1,30 @@
-.load-more-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .load-more-btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  .center {
-    margin: 24px;
-    display: flex;
-    justify-content: center;
-  }
+/* LoadMoreBtn.module.css */
+
+.center {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.loadMoreBtn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.loadMoreBtn:hover {
+  background-color: #3e8e41;
+}
+
+.loadMoreBtn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.loadMoreBtn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
